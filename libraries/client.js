@@ -38,7 +38,7 @@ var utils    = require('./modules/utils');
 var client = function(options) {
     var self = this;
 
-    self.setMaxListeners(0);
+    self.setMaxListeners(15);
 
     self.options            = (typeof options != 'undefined') ? options : {};
     var loggerClass         = self.options.loggerClass || require('./modules/logger');
