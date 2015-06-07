@@ -208,7 +208,8 @@ client.prototype._handleMessage = function(message) {
             /* Received reconnection request from Twitch */
             case 'RECONNECT':
                 self.logger.dev('Received reconnection request from Twitch.');
-                self.fastReconnect();
+                //self.fastReconnect();
+                self.disconnect();self.connect();
                 break;
 
             /* CLEARCHAT sent by the server */
